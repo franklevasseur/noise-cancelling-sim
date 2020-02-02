@@ -1,14 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-N: int = 1000
-Kp: float = 0.01
+N: int = 500
+sampling_freq: float = 0.01
 
-Kproc: float = -10.0
-tau: float = 5
+Kp: float = 0.1
+Ki: float = 0.0008
+Kd: float = 1
 
 
 def process(input_cmd):
+    Kproc = -10.0
+    tau = 5
     return Kproc * (np.exp(- input_cmd / tau) - 1)
 
 
@@ -18,19 +21,29 @@ if __name__ == '__main__':
     print("###### Program Starting... ######")
     print("#################################\n")
 
-    time = np.arange(N)
+    time = sampling_freq * np.arange(N)
 
     ref = 5 * np.ones(N)
     answer = np.zeros(N + 1)
-    command = np.zeros(N + 1)
 
-    for t, i in enumerate(time):
+    command = 0
+    cumulative_error = 0
+    previous_residuals = list()
+
+    for i, t in enumerate(time):
         residual = ref[i] - answer[i]
-        command[i + 1] = command[i] + Kp * residual
-        answer[i + 1] = process(command[i + 1])
 
-    plt.plot(time, ref, label="reference")
-    plt.plot(time, answer[0:N], label="answer")
+        previous_residuals.append(residual)
+        derivative = 0 if i < 1 else (previous_residuals[i] - previous_residuals[i - 1]) * sampling_freq
+
+        cumulative_error += (residual / sampling_freq)
+
+        command = (Kp * residual) + (cumulative_error * Ki)
+        answer[i + 1] = process(command)
+
+    plt.plot(time, ref, "r--", linewidth=2, label="reference")
+    plt.plot(time, answer[0:N], linewidth=1, label="answer")
+    # plt.plot(time, (ref - answer[0:N]), "g-", linewidth=1, label="result")
     plt.legend()
     plt.show()
 
