@@ -1,8 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
-
-N: int = 2000
-sampling_freq: float = 100
+import scipy.signal as sig
 
 if __name__ == '__main__':
 
@@ -10,11 +7,13 @@ if __name__ == '__main__':
     print("###### Program Starting... ######")
     print("#################################\n")
 
-    time = np.arange(N).reshape(N) / sampling_freq
-
-    mu, sigma = 0, 0.1  # mean and standard deviation
-    noise = np.random.normal(mu, sigma, N)
-    plt.plot(time, noise)
+    lti = sig.lti([1.0], [1.0, 1.0]) # LIT === linéaire et invariant en temps
+    t, y = sig.step(lti)
+    plt.plot(t, y)
+    plt.xlabel('Time [s]')
+    plt.ylabel('Amplitude')
+    plt.title('Step response for 1. Order Lowpass')
+    plt.grid()
     plt.show()
 
     print("\n#################################")

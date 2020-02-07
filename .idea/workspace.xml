@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4357ecb-03d7-458b-acc7-f9a11238af2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/first_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fourier_transform.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pid.py" beforeDir="false" afterPath="$PROJECT_DIR$/pid.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,18 +24,89 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XArF3yinT1LrMmcXu01MqfRTwW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.pid">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../fourier_transform" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.fourier_transform">
+    <configuration name="first_order" type="PythonConfigurationType" factoryName="Python">
+      <module name="noise-cancelling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/first_order.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="first_order" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="noise-cancelling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../fourier_transform/first_order.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fourier_transform" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="noise-cancelling" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fourier_transform.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="noise-cancelling" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,6 +149,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.pid" />
+      <item itemvalue="Python.first_order" />
+      <item itemvalue="Python.fourier_transform" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.fourier_transform" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -89,47 +174,63 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="695" y="487" width="879" height="593" key="#xdebugger.evaluate" timestamp="1580677824121">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state x="2043" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581043592089">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
+    <state x="2043" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.3200.1053@0.27.3200.1053" timestamp="1581043592089" />
+    <state x="1990" y="84" width="985" height="607" key="#xdebugger.evaluate" timestamp="1581042697126">
+      <screen x="0" y="27" width="3200" height="1053" />
+    </state>
+    <state x="1990" y="84" width="985" height="607" key="#xdebugger.evaluate/0.27.3200.1053@0.27.3200.1053" timestamp="1581042697126" />
     <state x="695" y="487" width="879" height="593" key="#xdebugger.evaluate/51.27.1869.1053@51.27.1869.1053" timestamp="1580677824121" />
     <state x="151" y="127" width="1669" height="853" key="DiffContextDialog" timestamp="1580680551504">
       <screen x="51" y="27" width="1869" height="1053" />
     </state>
     <state x="151" y="127" width="1669" height="853" key="DiffContextDialog/51.27.1869.1053@51.27.1869.1053" timestamp="1580680551504" />
-    <state width="1846" height="275" key="GridCell.Tab.0.bottom" timestamp="1580680545516">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="256" key="GridCell.Tab.0.bottom" timestamp="1581043624987">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="275" key="GridCell.Tab.0.bottom/51.27.1869.1053@51.27.1869.1053" timestamp="1580680545516" />
-    <state width="1846" height="275" key="GridCell.Tab.0.center" timestamp="1580680545514">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="256" key="GridCell.Tab.0.bottom/0.27.3200.1053@0.27.3200.1053" timestamp="1581043624987" />
+    <state width="1846" height="340" key="GridCell.Tab.0.bottom/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
+    <state width="1206" height="256" key="GridCell.Tab.0.center" timestamp="1581043624987">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="275" key="GridCell.Tab.0.center/51.27.1869.1053@51.27.1869.1053" timestamp="1580680545514" />
-    <state width="1846" height="275" key="GridCell.Tab.0.left" timestamp="1580680545513">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="256" key="GridCell.Tab.0.center/0.27.3200.1053@0.27.3200.1053" timestamp="1581043624987" />
+    <state width="1846" height="340" key="GridCell.Tab.0.center/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
+    <state width="1206" height="256" key="GridCell.Tab.0.left" timestamp="1581043624987">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="275" key="GridCell.Tab.0.left/51.27.1869.1053@51.27.1869.1053" timestamp="1580680545513" />
-    <state width="1846" height="275" key="GridCell.Tab.0.right" timestamp="1580680545515">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="256" key="GridCell.Tab.0.left/0.27.3200.1053@0.27.3200.1053" timestamp="1581043624987" />
+    <state width="1846" height="340" key="GridCell.Tab.0.left/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604901" />
+    <state width="1206" height="256" key="GridCell.Tab.0.right" timestamp="1581043624987">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="275" key="GridCell.Tab.0.right/51.27.1869.1053@51.27.1869.1053" timestamp="1580680545515" />
-    <state width="1846" height="340" key="GridCell.Tab.1.bottom" timestamp="1580679870084">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="256" key="GridCell.Tab.0.right/0.27.3200.1053@0.27.3200.1053" timestamp="1581043624987" />
+    <state width="1846" height="340" key="GridCell.Tab.0.right/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
+    <state width="1206" height="317" key="GridCell.Tab.1.bottom" timestamp="1581042933294">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="340" key="GridCell.Tab.1.bottom/51.27.1869.1053@51.27.1869.1053" timestamp="1580679870084" />
-    <state width="1846" height="340" key="GridCell.Tab.1.center" timestamp="1580679870083">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="317" key="GridCell.Tab.1.bottom/0.27.3200.1053@0.27.3200.1053" timestamp="1581042933294" />
+    <state width="1846" height="340" key="GridCell.Tab.1.bottom/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604903" />
+    <state width="1206" height="317" key="GridCell.Tab.1.center" timestamp="1581042933294">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="340" key="GridCell.Tab.1.center/51.27.1869.1053@51.27.1869.1053" timestamp="1580679870083" />
-    <state width="1846" height="340" key="GridCell.Tab.1.left" timestamp="1580679870083">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="317" key="GridCell.Tab.1.center/0.27.3200.1053@0.27.3200.1053" timestamp="1581042933294" />
+    <state width="1846" height="340" key="GridCell.Tab.1.center/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
+    <state width="1206" height="317" key="GridCell.Tab.1.left" timestamp="1581042933294">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="340" key="GridCell.Tab.1.left/51.27.1869.1053@51.27.1869.1053" timestamp="1580679870083" />
-    <state width="1846" height="340" key="GridCell.Tab.1.right" timestamp="1580679870083">
-      <screen x="51" y="27" width="1869" height="1053" />
+    <state width="1206" height="317" key="GridCell.Tab.1.left/0.27.3200.1053@0.27.3200.1053" timestamp="1581042933294" />
+    <state width="1846" height="340" key="GridCell.Tab.1.left/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
+    <state width="1206" height="317" key="GridCell.Tab.1.right" timestamp="1581042933294">
+      <screen x="0" y="27" width="3200" height="1053" />
     </state>
-    <state width="1846" height="340" key="GridCell.Tab.1.right/51.27.1869.1053@51.27.1869.1053" timestamp="1580679870083" />
+    <state width="1206" height="317" key="GridCell.Tab.1.right/0.27.3200.1053@0.27.3200.1053" timestamp="1581042933294" />
+    <state width="1846" height="340" key="GridCell.Tab.1.right/51.27.1869.1053@51.27.1869.1053" timestamp="1580739604902" />
     <state x="474" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1580499803172">
       <screen x="51" y="27" width="1869" height="1053" />
     </state>

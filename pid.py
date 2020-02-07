@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 N: int = 500
-sampling_freq: float = 0.01
+sampling_freq: float = 10
 
 Kp: float = 0.1
-Ki: float = 0.0008
+Ki: float = 0.8
 Kd: float = 1
 
 
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     print("###### Program Starting... ######")
     print("#################################\n")
 
-    time = sampling_freq * np.arange(N)
+    time = np.arange(N) / sampling_freq
 
     ref = 5 * np.ones(N)
     answer = np.zeros(N + 1)
