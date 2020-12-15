@@ -1,18 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.signal as sig
+
+from filterMemory import FilterMemory
 
 N: int = 8000
-sampling_freq: float = 50
-p: int = 100
+sampling_freq: float = 48000
+p: int = 10
 base_learn_factor: float = 1
+size_penality_factor: float = 0.02
+
+draw_weights: bool = False
+draw_signals: bool = True
 
 
-# butterworth d'ordre n = 2 et
-# fréquence de coupure wc = 0.3 * nyquist
 def h(x: np.ndarray) -> np.ndarray:
-    b, a = sig.butter(1, 0.01, analog=False, output='ba')
-    return sig.lfilter(b, a, x)
+    return 0.8 * x
 
 
 def create_ambiant_noise() -> np.ndarray:
@@ -34,6 +36,7 @@ if __name__ == '__main__':
     ybar = np.zeros(N + p)
     hbar = np.zeros(p)
     xbold = np.zeros(p)
+    mem: FilterMemory = FilterMemory(p)
 
     for n, xn in enumerate(x):
         # append current x to xbold window
@@ -47,30 +50,30 @@ if __name__ == '__main__':
 
         # update weights
         residual = d[n] - ybar[n]
-        hbar += learn_factor * residual * xbold
+        hbar = hbar * (1 - size_penality_factor) + learn_factor * residual * xbold
+        mem.append(hbar)
 
     residuals = d - ybar[:N]
 
-    # plt.plot(time, x, linewidth=0.1, label="x(t) actual noise")
-    plt.plot(time, d, color="green", linewidth=0.8, label="d(t) desired")
-    plt.plot(time, ybar[:N], color="blue", label="y_hat(t) cancelling signal")
-    plt.plot(time, residuals, color="r", linewidth=0.3, label="e(t) residual")
+    if draw_signals:
+        # plt.plot(time, x, linewidth=0.1, label="x(t) actual noise")
+        plt.plot(time, d, color="green", linewidth=0.8, label="d(t) desired")
+        plt.plot(time, ybar[:N], color="blue", label="y_hat(t) cancelling signal")
+        plt.plot(time, residuals, color="r", linewidth=0.3, label="e(t) residual")
 
-    plt.xlabel('Time [s]')
-    plt.ylabel('Amplitude')
-    plt.title('ACN with LMS')
-    plt.legend()
-    plt.show()
+        plt.xlabel('Time [s]')
+        plt.ylabel('Amplitude')
+        plt.title('ACN with LMS')
+        plt.legend()
+        plt.show()
 
-    # yf = ft.fft(weights)
-    # xf = np.linspace(0.0, 1.0 / (2.0 / sampling_freq), p)
-    # yf_norm = (2.0 / N) * np.abs(yf[:N // 2])
-    #
-    # plt.xlabel('frequency (unknown units...)')
-    # plt.ylabel('|H(jw)|')
-    # plt.title('fourier transform of H(n)')
-    # plt.plot(xf, yf)
-    # plt.show()
+    if draw_weights:
+        allMemories = mem.getAll()
+        for i, m in enumerate(allMemories):
+            plt.plot(m, label="h({})".format(i))
+
+        plt.legend()
+        plt.show()
 
     print("\n#################################")
     print("####### Program Ending... #######")
